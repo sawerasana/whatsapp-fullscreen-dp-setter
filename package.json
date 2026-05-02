@@ -1,0 +1,19 @@
+{
+  "name": "whatsapp-fullscreen-dp-setter",
+  "version": "1.0.0",
+  "description": "Modern tool to set a full-screen WhatsApp DP using a pairing code.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.6.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "uuid": "^9.0.0"
+  },
+  "author": "Team Bandaheali",
+  "license": "MIT"
+}

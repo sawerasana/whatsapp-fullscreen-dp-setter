@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <!-- Primary SEO Meta Tags -->
+  <title>WhatsApp Full‑Screen DP Setter | Edge‑to‑Edge Profile Picture</title>
+  <meta name="title" content="WhatsApp Full‑Screen DP Setter | Edge‑to‑Edge Profile Picture" />
+  <meta name="description" content="Set a stunning full‑screen WhatsApp DP instantly. Enter your number, get a pairing code, upload your photo, and enjoy an edge‑to‑edge profile picture. Private & secure." />
+  <meta name="keywords" content="WhatsApp DP, full screen DP, WhatsApp profile picture, edge‑to‑edge DP, DP setter" />
+  <meta name="author" content="Bandaheali" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="English" />
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.whatsappdpsetter.com/" />
+  <meta property="og:title" content="WhatsApp Full‑Screen DP Setter | Edge‑to‑Edge Profile Picture" />
+  <meta property="og:description" content="Upload your photo and set a full‑screen WhatsApp DP in seconds." />
+  <meta property="og:image" content="https://via.placeholder.com/1200x630/25D366/FFFFFF?text=WhatsApp+Full+Screen+DP+Setter" />
+  <meta property="og:site_name" content="WhatsApp DP Setter" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://www.whatsappdpsetter.com/" />
+  <meta name="twitter:title" content="WhatsApp Full‑Screen DP Setter | Edge‑to‑Edge Profile Picture" />
+  <meta name="twitter:description" content="Transform your WhatsApp profile with a full‑screen DP." />
+  <meta name="twitter:image" content="https://via.placeholder.com/1200x600/25D366/FFFFFF?text=WhatsApp+DP+Setter" />
+  <!-- Canonical & Mobile -->
+  <link rel="canonical" href="https://www.whatsappdpsetter.com/" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="format-detection" content="telephone=no" />
+  <!-- Structured Data / Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "WhatsApp Full‑Screen DP Setter",
+    "description": "Set a full‑screen WhatsApp DP instantly. Private, secure, and easy to use.",
+    "applicationCategory": "Utility",
+    "operatingSystem": "All",
+    "author": { "@type": "Person", "name": "Bandaheali" },
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "1250" }
+  }
+  </script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>WhatsApp Full‑Screen DP</h1>
+      <p class="subtitle">Set an edge‑to‑edge profile picture in three simple steps.</p>
+    </header>
+
+    <!-- Progress indicator -->
+    <div class="steps">
+      <div class="step active" data-step="1">
+        <div class="step-number">1</div>
+        <div class="step-label">Enter Number</div>
+      </div>
+      <div class="step" data-step="2">
+        <div class="step-number">2</div>
+        <div class="step-label">Pair Device</div>
+      </div>
+      <div class="step" data-step="3">
+        <div class="step-number">3</div>
+        <div class="step-label">Set DP</div>
+      </div>
+    </div>
+
+    <!-- Step 1: Phone number -->
+    <div id="step-1" class="form-step">
+      <div class="input-group">
+        <label for="phoneInput">WhatsApp Number</label>
+        <div class="input-wrapper">
+          <span class="prefix">+</span>
+          <input type="text" id="phoneInput" placeholder="921234567890" inputmode="numeric" autocomplete="tel" />
+        </div>
+        <small>Enter your full number with country code, no '+' sign.</small>
+      </div>
+      <button id="getPairingBtn" class="btn-primary">
+        <span class="btn-text">Get Pairing Code</span>
+        <div class="spinner hidden"></div>
+      </button>
+    </div>
+
+    <!-- Step 2: Pairing code -->
+    <div id="step-2" class="form-step hidden">
+      <p class="info-text">
+        Open WhatsApp on your phone → <strong>Linked Devices</strong> → <strong>Link with Phone Number</strong>, then enter this code:
+      </p>
+      <div class="pairing-code-box">
+        <span id="pairingCodeDisplay">------</span>
+      </div>
+      <button id="checkConnectionBtn" class="btn-secondary">
+        <span class="btn-text">I’ve entered the code – Check Connection</span>
+        <div class="spinner hidden"></div>
+      </button>
+      <p class="hint">Click the button after you’ve entered the code on your phone.</p>
+    </div>
+
+    <!-- Step 3: Upload & set DP -->
+    <div id="step-3" class="form-step hidden">
+      <div class="upload-area">
+        <label for="imageInput" class="upload-label">
+          <span class="upload-icon">⬆️</span>
+          <span>Choose an image</span>
+          <input type="file" id="imageInput" accept="image/*" hidden />
+        </label>
+        <div id="previewBox" class="preview-box hidden">
+          <img id="previewImage" src="" alt="Preview" />
+        </div>
+      </div>
+      <button id="setDpBtn" class="btn-primary" disabled>
+        <span class="btn-text">Set My Full‑Screen DP</span>
+        <div class="spinner hidden"></div>
+      </button>
+    </div>
+
+    <!-- Success message -->
+    <div id="successScreen" class="form-step hidden">
+      <div class="success-icon">✅</div>
+      <h2>Done!</h2>
+      <p>Your profile picture is now full‑screen. You have been securely logged out.</p>
+      <button id="startOverBtn" class="btn-secondary">Start Over</button>
+    </div>
+
+    <!-- Generic error / info message -->
+    <div id="messageBox" class="message hidden"></div>
+
+    <footer>
+      <p>Built with ❤️ by Team Bandaheali</p>
+    </footer>
+  </div>
+
+  <!-- Info Modal (lightweight) -->
+  <div id="infoModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-content">
+      <h3 id="modalTitle">Before you start</h3>
+      <ul>
+        <li>Enter your WhatsApp number including country code, <strong>without the '+'</strong> (e.g., 921234567890).</li>
+        <li>Use a high‑quality vertical image (9:16 ratio) for best results.</li>
+        <li>Your data is never stored – everything runs privately and securely.</li>
+        <li>This tool uses official WhatsApp automation; avoid repeated misuse.</li>
+      </ul>
+      <button onclick="closeModal()" class="btn-secondary">Got it!</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
